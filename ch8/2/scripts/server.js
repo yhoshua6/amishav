@@ -19,8 +19,8 @@ app.get('/', function (req, res) {
     res.sendfile('/src/index.html');
 });
 
-route(app, /^\/(scripts)\/(.*)/, '/src/');
-route(app, /^\/(styles|styleguide|images|fonts)\/(.*)/, '/wsk/');
+route(app, /^\/(scripts|css|img|images|js)\/(.*)/, '/src/');
+route(app, /^\/(styles|styleguide|images|img|fonts)\/(.*)/, '/wsk/');
 
 app.listen(PORT);
 console.log('Running on port ' + PORT);
